@@ -1,0 +1,39 @@
+// var x = 2;
+// var y = 4;
+// var sum = x+y;
+// console.log(`summe of x , y is ${sum}`)
+
+// var mathlib = require('./mathlib')
+// console.log(mathlib)
+// let s = mathlib.summe(2,3)
+// console.log(s)
+// let min = mathlib.minus(2,3)
+// console.log(min)
+// let mul = mathlib.multiply(2,3)
+// console.log(mul)
+
+const { summe, minus, multiply } = require("./mathlib");
+// let s = minus(5,6)
+// console.log(s)
+// console.log(process.argv)
+const a = Number(process.argv[2]);
+const opration = process.argv[3];
+const b = Number(process.argv[4]);
+// console.log(summe(a, b));
+// console.log(minus(a, b));
+// console.log(multiply(a, b));
+
+switch (opration) {
+  case "+":
+    console.log(summe(a, b));
+    break;
+  case "-":
+    console.log(minus(a, b));
+    break;
+  case "*":
+    console.log(multiply(a, b));
+    break;
+  default:
+    console.log('try again')
+    break;
+}
